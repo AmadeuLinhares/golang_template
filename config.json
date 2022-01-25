@@ -1,0 +1,38 @@
+{
+  "tc": "development",
+  "docs": {
+    "key": "123"
+  },
+  "server": {
+    "port": ":5055"
+  },
+  "database": {
+    "writer": {
+      "url": "mmuser:TradersPetr4@tcp(10.249.240.3:3306)/tradersclub?charset=utf8mb4,utf8\\u0026readTimeout=30s\\u0026writeTimeout=30s"
+    },
+    "reader": {
+      "url": "mmuser:TradersPetr4@tcp(10.249.240.3:3306)/tradersclub?charset=utf8mb4,utf8\\u0026readTimeout=30s\\u0026writeTimeout=30s"
+    },
+    "reader_no_sql": {
+      "url": "mongodb://mmuser:TradersPetr4@cluster0-shard-00-00-stf0h.mongodb.net:27017/,cluster0-shard-00-01-stf0h.mongodb.net:27017/,cluster0-shard-00-02-stf0h.mongodb.net:27017/tradersclub-dev?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority",
+      "scheme": "tradersclub-dev"
+    },
+    "writer_no_sql": {
+      "url": "mongodb://mmuser:TradersPetr4@cluster0-shard-00-00-stf0h.mongodb.net:27017/,cluster0-shard-00-01-stf0h.mongodb.net:27017/,cluster0-shard-00-02-stf0h.mongodb.net:27017/tradersclub-dev?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority",
+      "scheme": "tradersclub-dev"
+    }
+  },
+  "cache": {
+    "url": "172.16.0.6:11211",
+    "expiration": "1h",
+    "timeout": "10s"
+  },
+  "nats": {
+    "url": "nats://172.16.0.9:14222, nats://172.16.0.9:24222, nats://172.16.0.9:34222"
+  },
+  "auth": {
+    "addr": "172.16.0.124",
+    "port": "50051",
+    "timeout": "5s"
+  }
+}
